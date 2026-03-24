@@ -1,0 +1,53 @@
+# ============================================================
+# Frases de Teste em Português Brasileiro
+# Projeto: TTS Acessibilidade PT-BR
+# Uso: Síntese de voz para avaliação de modelos TTS
+# ============================================================
+
+# --- FRASES CURTAS (5–10 palavras) ---
+
+O sol nasceu cedo hoje.
+A biblioteca está aberta às oito horas.
+Por favor, aguarde um momento.
+Você tem uma mensagem nova.
+O semáforo está verde, pode atravessar.
+Pressione a tecla Enter para continuar.
+Conectando ao servidor, aguarde.
+Arquivo salvo com sucesso.
+Bateria fraca, conecte o carregador.
+Hora atual: quinze horas e trinta minutos.
+
+# --- FRASES MÉDIAS (15–25 palavras) ---
+
+Para acessar o menu principal, pressione a tecla Alt e a letra M ao mesmo tempo.
+O documento foi enviado com sucesso para o endereço de e-mail informado.
+Existem três notificações não lidas em sua caixa de entrada. Deseja visualizá-las agora?
+O download do arquivo será concluído em aproximadamente dois minutos e quarenta segundos.
+Por favor, confirme seu endereço antes de finalizar o cadastro no sistema.
+A atualização do sistema operacional está disponível. Recomendamos instalar o quanto antes.
+Seu pedido número 12.345 foi aprovado e está sendo preparado para envio.
+
+# --- FRASES LONGAS (30+ palavras) ---
+
+Este software de leitura de tela foi desenvolvido para auxiliar pessoas com deficiência visual a acessar conteúdos digitais de forma autônoma, independente e segura, utilizando tecnologia de síntese de voz de alta qualidade.
+De acordo com o Instituto Brasileiro de Geografia e Estatística, aproximadamente 6,5 milhões de pessoas no Brasil possuem algum tipo de deficiência visual, sendo que cerca de 500 mil são cegas e mais de 6 milhões têm baixa visão.
+A inteligência artificial tem transformado o modo como desenvolvemos ferramentas de acessibilidade, permitindo que modelos de síntese de voz alcancem um nível de naturalidade cada vez mais próximo da fala humana, beneficiando diretamente pessoas com deficiência visual.
+
+# --- FRASES COM NÚMEROS E SIGLAS ---
+
+O CPF informado é 123.456.789-09.
+Ligue para o número 0800-722-0101.
+A temperatura atual é de 28°C com umidade relativa de 65%.
+O arquivo tem 2,3 GB e será baixado em 3 minutos.
+Sua senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas e números.
+O RTF do modelo XTTS-v2 foi de 0,42, indicando síntese em tempo real.
+A taxa de amostragem padrão é de 22.050 Hz, equivalente a 22 kHz.
+
+# --- FRASES DE CONTEXTO DE ACESSIBILIDADE ---
+
+O semáforo está vermelho. Aguarde para atravessar a rua com segurança.
+Você está na página inicial do aplicativo. Existem quatro opções no menu.
+Atenção: degrau à frente. Reduza a velocidade e proceda com cuidado.
+O caixa eletrônico está localizado à sua direita, a aproximadamente dez passos.
+Para ler a bula do medicamento, aponte a câmera para o texto e pressione o botão central.
+Esta é uma notificação de emergência. Por favor, dirija-se à saída mais próxima imediatamente.
