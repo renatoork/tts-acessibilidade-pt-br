@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ambientes virtuais
+.env
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Áudios gerados (podem ser grandes)
+*.wav
+*.mp3
+*.ogg
+*.flac
+
+# Modelos TTS (muito grandes para versionar)
+*.pt
+*.pth
+*.bin
+*.onnx
+piper_models/
+kokoro-v1.0.onnx
+voices-v1.0.bin
+reference_speaker.wav
+
+# Outputs gerados
+outputs/
+
+# Ferramentas de ML
+wandb/
+mlruns/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
