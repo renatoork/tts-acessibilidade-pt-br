@@ -175,8 +175,10 @@ Este projeto está licenciado sob a [MIT License](LICENSE) — Copyright 2026 Re
 ---
 
 ## 👤 Autor
-**Rafael Soares - []
-**Raphael Henrique - []
+**Rafael Soares - [@RafaelSoares19](https://github.com/RafaelSoares19)
+
+**Raphael Henrique - [@RHSantos08](https://github.com/RHSantos08)
+
 **Renato Arruda** — [@renatoork](https://github.com/renatoork)
 
 ---
