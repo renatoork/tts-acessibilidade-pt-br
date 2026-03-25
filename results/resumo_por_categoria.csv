@@ -1,0 +1,15 @@
+﻿Categoria,Qtde,Latencia_media,WER_medio
+curtas_objetivas,30,4.0297,0.1317
+datas_horarios,30,10.4397,0.1119
+enderecos_urls_emails,30,10.7171,0.4202
+ingles_e_code_switching,30,8.215,0.2155
+interrogativas_e_exclamativas,30,6.392,0.1514
+longas_narrativas,30,27.7677,0.0748
+medias_informativas,30,12.2354,0.0912
+nomes_internacionais,30,7.9401,0.4083
+nomes_proprios_brasileiros,30,6.9929,0.21
+numeros_medidas_moedas,30,10.0925,0.165
+pontuacao_e_pausas,30,8.469,0.2026
+regionalismos_e_girias,30,7.5526,0.1317
+siglas_e_abreviacoes,30,9.2293,0.1802
+termos_tecnicos_academicos,30,13.2821,0.1624

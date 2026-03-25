@@ -18,10 +18,10 @@ env/
 .ipynb_checkpoints/
 
 # Áudios gerados (podem ser grandes)
-*.wav
-*.mp3
-*.ogg
-*.flac
+#*.wav
+#*.mp3
+#*.ogg
+#*.flac
 
 # Modelos TTS (muito grandes para versionar)
 *.pt

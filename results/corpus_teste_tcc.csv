@@ -1,0 +1,141 @@
+﻿Categoria,FraseID,Texto,NumPalavras
+curtas_objetivas,curtas_objetivas_01,Bom dia.,2
+curtas_objetivas,curtas_objetivas_02,A porta está aberta.,4
+curtas_objetivas,curtas_objetivas_03,O sistema iniciou corretamente.,4
+curtas_objetivas,curtas_objetivas_04,Hoje o céu está limpo.,5
+curtas_objetivas,curtas_objetivas_05,Maria chegou cedo.,3
+curtas_objetivas,curtas_objetivas_06,O arquivo foi salvo.,4
+curtas_objetivas,curtas_objetivas_07,A aula começa agora.,4
+curtas_objetivas,curtas_objetivas_08,Este teste foi concluído.,4
+curtas_objetivas,curtas_objetivas_09,O microfone está ligado.,4
+curtas_objetivas,curtas_objetivas_10,A conexão voltou ao normal.,5
+medias_informativas,medias_informativas_01,O projeto foi desenvolvido para avaliar modelos de síntese de voz em português brasileiro.,14
+medias_informativas,medias_informativas_02,A equipe registrou os resultados de latência e inteligibilidade em uma planilha compartilhada.,13
+medias_informativas,medias_informativas_03,"O usuário pode ouvir o áudio gerado diretamente no navegador, sem instalar programas adicionais.",14
+medias_informativas,medias_informativas_04,"A análise comparativa considera tempo de resposta, clareza da fala e custo computacional.",13
+medias_informativas,medias_informativas_05,O experimento foi executado em ambiente controlado para reduzir variações entre os modelos.,13
+medias_informativas,medias_informativas_06,Cada frase foi sintetizada com os mesmos parâmetros sempre que isso foi tecnicamente possível.,14
+medias_informativas,medias_informativas_07,Os dados coletados permitem discutir vantagens práticas de cada abordagem de TTS.,12
+medias_informativas,medias_informativas_08,O corpus inclui frases com estruturas simples e complexas para ampliar a cobertura linguística.,14
+medias_informativas,medias_informativas_09,Os resultados foram organizados por categoria para facilitar a interpretação posterior.,11
+medias_informativas,medias_informativas_10,A metodologia prioriza modelos abertos e acessíveis para uso acadêmico e social.,12
+longas_narrativas,longas_narrativas_01,"Durante a execução do experimento, observou-se que modelos mais leves tendem a responder com maior rapidez, embora nem sempre ofereçam o mesmo nível de naturalidade percebida em textos mais extensos.",30
+longas_narrativas,longas_narrativas_02,"Em um cenário de acessibilidade informacional, a escolha de um sistema de síntese de voz deve considerar não apenas a qualidade sonora, mas também a viabilidade de uso em equipamentos simples e contextos offline.",34
+longas_narrativas,longas_narrativas_03,"Ao comparar diferentes arquiteturas de TTS, torna-se possível identificar compromissos entre velocidade de geração, inteligibilidade da saída, naturalidade da prosódia e capacidade de personalização da voz.",26
+longas_narrativas,longas_narrativas_04,"O corpus foi planejado para incluir frases curtas, médias e longas, além de exemplos com números, datas, nomes próprios e palavras estrangeiras, de modo a ampliar a robustez da avaliação.",30
+longas_narrativas,longas_narrativas_05,"Embora os resultados quantitativos sejam importantes, a interpretação qualitativa continua sendo essencial, especialmente quando o objetivo do projeto envolve experiência do usuário e acessibilidade prática.",25
+longas_narrativas,longas_narrativas_06,"A literatura recente mostra avanços significativos em modelos neurais de síntese de voz, mas ainda existe uma diferença relevante entre desempenho laboratorial e adoção em contextos cotidianos de uso.",29
+longas_narrativas,longas_narrativas_07,"Em aplicações educacionais e assistivas, um modelo de TTS precisa manter clareza suficiente para leituras prolongadas, evitando fadiga auditiva e favorecendo compreensão contínua do conteúdo apresentado.",26
+longas_narrativas,longas_narrativas_08,"A possibilidade de reexecutar o experimento em notebook reprodutível fortalece a confiabilidade metodológica do trabalho, pois permite validação independente por parte da banca examinadora.",24
+longas_narrativas,longas_narrativas_09,"Mesmo quando um modelo apresenta maior expressividade, isso não significa que ele seja automaticamente o mais adequado, já que latência e custo computacional podem limitar seu uso em cenários reais.",30
+longas_narrativas,longas_narrativas_10,"A comparação sistemática entre alternativas abertas contribui para a democratização do acesso à tecnologia, sobretudo em projetos que buscam beneficiar usuários com diferentes perfis e restrições de infraestrutura.",28
+numeros_medidas_moedas,numeros_medidas_moedas_01,"O sensor registrou 3,5 metros de distância até a parede.",10
+numeros_medidas_moedas,numeros_medidas_moedas_02,A temperatura caiu para 18 graus às 6 horas da manhã.,11
+numeros_medidas_moedas,numeros_medidas_moedas_03,O produto custa 249 reais e 90 centavos nesta semana.,10
+numeros_medidas_moedas,numeros_medidas_moedas_04,"A amostra continha 12,7 mililitros de solução concentrada.",8
+numeros_medidas_moedas,numeros_medidas_moedas_05,O arquivo possui 256 megabytes e foi enviado em 42 segundos.,11
+numeros_medidas_moedas,numeros_medidas_moedas_06,"A velocidade média do teste ficou em 87,3 quilômetros por hora.",11
+numeros_medidas_moedas,numeros_medidas_moedas_07,Foram processados 1.250 registros em menos de 5 minutos.,9
+numeros_medidas_moedas,numeros_medidas_moedas_08,O orçamento final estimado foi de 7.840 reais.,8
+numeros_medidas_moedas,numeros_medidas_moedas_09,A bateria chegou a 15 por cento de carga restante.,10
+numeros_medidas_moedas,numeros_medidas_moedas_10,"O experimento utilizou 4 modelos, 140 frases e 3 métricas principais.",11
+datas_horarios,datas_horarios_01,A apresentação final será no dia 22 de novembro de 2026.,11
+datas_horarios,datas_horarios_02,O sistema foi atualizado em 3 de abril de 2025 às 14 horas e 30 minutos.,16
+datas_horarios,datas_horarios_03,"A reunião está marcada para terça-feira, às 8 horas da manhã.",11
+datas_horarios,datas_horarios_04,O relatório foi entregue em 12 de setembro de 2024.,10
+datas_horarios,datas_horarios_05,O acesso ao laboratório será liberado amanhã às 19 horas.,10
+datas_horarios,datas_horarios_06,"No dia primeiro de janeiro, a plataforma ficou indisponível por duas horas.",12
+datas_horarios,datas_horarios_07,A coleta de dados começou em 7 de maio e terminou em 18 de junho.,15
+datas_horarios,datas_horarios_08,"O atendimento ocorrerá das 9 horas às 17 horas, sem intervalo.",11
+datas_horarios,datas_horarios_09,O evento internacional terá início em 15 de agosto às 10 horas.,12
+datas_horarios,datas_horarios_10,"Na sexta-feira passada, o servidor reiniciou automaticamente às 23 horas e 45 minutos.",13
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_01,João Pedro apresentou o seminário para a professora Helena.,9
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_02,Ana Beatriz enviou o relatório revisado para Carlos Eduardo.,9
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_03,Mariana encontrou Luiz Fernando na biblioteca central.,7
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_04,Gabriel Souza participou da banca com Patrícia Almeida.,8
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_05,Fernanda pediu apoio técnico a Ricardo Menezes.,7
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_06,Juliana e Marcelo organizaram os arquivos do projeto.,8
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_07,Beatriz Nogueira conversou com Vinícius sobre os resultados.,8
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_08,Rafaela acompanhou a leitura feita por Paulo Henrique.,8
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_09,Camila avisou Daniela sobre a mudança de cronograma.,8
+nomes_proprios_brasileiros,nomes_proprios_brasileiros_10,Thiago Lopes recebeu orientação de Renata Carvalho.,7
+nomes_internacionais,nomes_internacionais_01,Michael Johnson enviou uma mensagem para Catherine Miller.,8
+nomes_internacionais,nomes_internacionais_02,Sofia Rossi participou da reunião com Matteo Bianchi.,8
+nomes_internacionais,nomes_internacionais_03,Yuki Tanaka apresentou o protótipo para Kenji Sato.,8
+nomes_internacionais,nomes_internacionais_04,Fatima Al-Hassan revisou o documento com Omar Khaled.,8
+nomes_internacionais,nomes_internacionais_05,Jean Dupont conversou com Claire Bernard sobre o cronograma.,9
+nomes_internacionais,nomes_internacionais_06,Luca Moretti encontrou Giulia Conti no laboratório.,7
+nomes_internacionais,nomes_internacionais_07,Emily Watson recebeu o e-mail de Daniel Smith às nove horas.,11
+nomes_internacionais,nomes_internacionais_08,Hans Müller discutiu o experimento com Greta Schneider.,8
+nomes_internacionais,nomes_internacionais_09,Olivia Brown compartilhou os dados com William Harris.,8
+nomes_internacionais,nomes_internacionais_10,Miguel Ángel preparou a apresentação com Lucía Fernández.,8
+termos_tecnicos_academicos,termos_tecnicos_academicos_01,"O benchmark comparou latência, inteligibilidade e custo computacional dos modelos.",10
+termos_tecnicos_academicos,termos_tecnicos_academicos_02,A inferência foi executada em ambiente Colab com dependências controladas por versão.,12
+termos_tecnicos_academicos,termos_tecnicos_academicos_03,O pipeline de avaliação utilizou transcrição automática e cálculo de WER.,11
+termos_tecnicos_academicos,termos_tecnicos_academicos_04,A arquitetura do sistema prioriza reprodutibilidade experimental e rastreabilidade dos dados.,11
+termos_tecnicos_academicos,termos_tecnicos_academicos_05,Os resultados foram consolidados em DataFrame para análise estatística descritiva.,10
+termos_tecnicos_academicos,termos_tecnicos_academicos_06,"A síntese neural de fala evoluiu com modelos baseados em atenção, difusão e transformers.",14
+termos_tecnicos_academicos,termos_tecnicos_academicos_07,A metodologia contempla avaliação objetiva e interpretação qualitativa da naturalidade perceptiva.,11
+termos_tecnicos_academicos,termos_tecnicos_academicos_08,A amostragem textual foi estratificada por categoria linguística e complexidade lexical.,11
+termos_tecnicos_academicos,termos_tecnicos_academicos_09,A validação dos áudios considerou tanto métricas automáticas quanto escuta crítica humana.,12
+termos_tecnicos_academicos,termos_tecnicos_academicos_10,"O estudo discute trade-offs entre expressividade, velocidade de geração e acessibilidade computacional.",12
+regionalismos_e_girias,regionalismos_e_girias_01,"Oxente, esse áudio saiu melhor do que eu esperava.",9
+regionalismos_e_girias,regionalismos_e_girias_02,"Uai, o modelo respondeu rapidinho nesse teste.",7
+regionalismos_e_girias,regionalismos_e_girias_03,"Bah, essa voz ficou bem mais natural nessa frase.",9
+regionalismos_e_girias,regionalismos_e_girias_04,"Eita, o processamento demorou mais do que no caso anterior.",10
+regionalismos_e_girias,regionalismos_e_girias_05,"Tchê, vamos rodar de novo para confirmar o resultada.",9
+regionalismos_e_girias,regionalismos_e_girias_06,"Esse notebook travou, mas depois voltou de boa.",8
+regionalismos_e_girias,regionalismos_e_girias_07,"A saída ficou meio estranha, tipo robótica demais.",8
+regionalismos_e_girias,regionalismos_e_girias_08,"Cara, esse modelo mandou bem nas frases curtas.",8
+regionalismos_e_girias,regionalismos_e_girias_09,"Poxa, a entonação ficou legal, mas a latência subiu.",9
+regionalismos_e_girias,regionalismos_e_girias_10,"Rapaz, esse exemplo com gíria ficou interessante para avaliação.",9
+ingles_e_code_switching,ingles_e_code_switching_01,O download do checkpoint foi concluído com sucesso.,8
+ingles_e_code_switching,ingles_e_code_switching_02,O script executou o benchmark e salvou o log final.,10
+ingles_e_code_switching,ingles_e_code_switching_03,A equipe fez upload dos arquivos para o Google Drive.,10
+ingles_e_code_switching,ingles_e_code_switching_04,O dataset foi processado antes da etapa de inference.,9
+ingles_e_code_switching,ingles_e_code_switching_05,O modelo entrou em fallback quando a GPU ficou indisponível.,10
+ingles_e_code_switching,ingles_e_code_switching_06,A versão do notebook está no branch principal do repositório.,10
+ingles_e_code_switching,ingles_e_code_switching_07,O prompt foi ajustado para melhorar o output de áudio.,10
+ingles_e_code_switching,ingles_e_code_switching_08,O pipeline usa cache local para evitar novo download do modelo.,11
+ingles_e_code_switching,ingles_e_code_switching_09,O framework permite testing automatizado das frases do corpus.,9
+ingles_e_code_switching,ingles_e_code_switching_10,A validação final combinou listening test e métricas automáticas.,9
+siglas_e_abreviacoes,siglas_e_abreviacoes_01,O CPF do aluno foi validado antes do cadastro.,9
+siglas_e_abreviacoes,siglas_e_abreviacoes_02,A API retornou erro ao consultar o CNPJ da empresa.,10
+siglas_e_abreviacoes,siglas_e_abreviacoes_03,O SUS ainda é referência nacional em políticas públicas de saúde.,11
+siglas_e_abreviacoes,siglas_e_abreviacoes_04,A ONU publicou um novo relatório sobre inclusão digital.,9
+siglas_e_abreviacoes,siglas_e_abreviacoes_05,O TCC utiliza métricas de TTS e ASR no mesmo pipeline.,11
+siglas_e_abreviacoes,siglas_e_abreviacoes_06,"A GPU ficou indisponível, então a execução ocorreu em CPU.",10
+siglas_e_abreviacoes,siglas_e_abreviacoes_07,A UFMG recebeu o arquivo enviado pela equipe do projeto.,10
+siglas_e_abreviacoes,siglas_e_abreviacoes_08,A URL da documentação foi registrada no PDF final.,9
+siglas_e_abreviacoes,siglas_e_abreviacoes_09,A IA generativa exige cuidado com avaliação e reprodutibilidade.,9
+siglas_e_abreviacoes,siglas_e_abreviacoes_10,O sistema consulta dados do CEP antes de preencher o formulário.,11
+pontuacao_e_pausas,pontuacao_e_pausas_01,"Se o teste falhar, execute novamente a célula.",8
+pontuacao_e_pausas,pontuacao_e_pausas_02,"O modelo foi carregado; em seguida, iniciou-se a geração do áudio.",11
+pontuacao_e_pausas,pontuacao_e_pausas_03,"Há três critérios principais: latência, inteligibilidade e naturalidade.",8
+pontuacao_e_pausas,pontuacao_e_pausas_04,"O resultado, embora promissor, ainda exige validação adicional.",8
+pontuacao_e_pausas,pontuacao_e_pausas_05,"Maria disse: a voz ficou clara, mas lenta.",8
+pontuacao_e_pausas,pontuacao_e_pausas_06,"O experimento inclui frases curtas, médias e longas.",8
+pontuacao_e_pausas,pontuacao_e_pausas_07,"Quando o download terminar, inicie a próxima etapa.",8
+pontuacao_e_pausas,pontuacao_e_pausas_08,"O benchmark, como planejado, foi executado em ambiente controlado.",9
+pontuacao_e_pausas,pontuacao_e_pausas_09,"Os dados coletados, depois de revisados, foram exportados para análise.",10
+pontuacao_e_pausas,pontuacao_e_pausas_10,"A banca avaliará o código, os áudios e a metodologia.",10
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_01,Você conseguiu ouvir claramente a frase sintetizada?,7
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_02,Qual modelo apresentou a menor latência neste teste?,8
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_03,Será que a voz ficou natural o suficiente para leitura contínua?,11
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_04,Como o sistema reage quando encontra palavras em inglês?,9
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_05,Por que esse áudio parece mais robótico do que o anterior?,11
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_06,Que diferença grande de tempo entre os modelos!,8
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_07,"Nossa, essa entonação ficou muito melhor!",6
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_08,Será que a banca vai preferir o modelo mais rápido?,10
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_09,Como explicar esse resultado sem considerar o custo computacional?,9
+interrogativas_e_exclamativas,interrogativas_e_exclamativas_10,"Incrível, o áudio foi gerado em poucos segundos!",8
+enderecos_urls_emails,enderecos_urls_emails_01,O site oficial do projeto está em www.exemplo.org.,8
+enderecos_urls_emails,enderecos_urls_emails_02,Envie a documentação para contato@laboratorio.edu.br.,5
+enderecos_urls_emails,enderecos_urls_emails_03,"O endereço informado foi Rua das Flores, número 125, sala 4.",11
+enderecos_urls_emails,enderecos_urls_emails_04,"A reunião será no campus central, bloco B, terceiro andar.",10
+enderecos_urls_emails,enderecos_urls_emails_05,A página de referência está disponível em https://dados.gov.br.,8
+enderecos_urls_emails,enderecos_urls_emails_06,O suporte técnico pode ser acionado pelo e-mail suporte@teste.com.,9
+enderecos_urls_emails,enderecos_urls_emails_07,"O laboratório fica na Avenida Brasil, número 900, em Belo Horizonte.",11
+enderecos_urls_emails,enderecos_urls_emails_08,O formulário pode ser acessado em portal.exemplo.com.br/login.,7
+enderecos_urls_emails,enderecos_urls_emails_09,O arquivo foi enviado para pesquisa.tcc@universidade.br ontem à noite.,9
+enderecos_urls_emails,enderecos_urls_emails_10,"O evento ocorrerá na Praça Sete, centro da cidade, próximo ao auditório principal.",13
