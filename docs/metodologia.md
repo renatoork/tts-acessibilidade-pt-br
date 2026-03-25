@@ -155,3 +155,11 @@ Texto de entrada (corpus)
 | Framework de áudio | `soundfile` 0.13.1 |
 | ASR | OpenAI Whisper `base` |
 | Métricas | `jiwer` 3.0.4 |
+
+---
+
+## 7. Referências
+
+A lista completa de referências bibliográficas formatadas em **ABNT NBR 6023:2018** está disponível em [`docs/referencias.md`](referencias.md).
+
+A justificativa detalhada da seleção dos modelos, incluindo critérios, modelos descartados e diversidade arquitetural, está disponível em [`docs/selecao_modelos.md`](selecao_modelos.md).
