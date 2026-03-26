@@ -395,17 +395,17 @@ O Kokoro é recomendado para aplicações que valorizam **qualidade da síntese*
 
 O XTTS v2 é recomendado para aplicações que valorizam **expressividade** e **personalização de voz**, especialmente quando GPU está disponível:
 
-1. **Narração personalizada para deficiência visual progressiva:** O XTTS suporta clonagem de voz a partir de um áudio de referência, permitindo que pessoas com doenças neurodegenerativas (como ELA) preservem e utilizem sua própria voz sintética mesmo após perderem a capacidade de falar.
+1. **Preservação de voz para condições degenerativas (ELA):** A clonagem de voz zero-shot do XTTS é particularmente relevante para usuários diagnosticados com Esclerose Lateral Amiotrófica (ELA) ou outras condições que causam perda progressiva da fala. O modelo pode ser treinado com amostras de voz gravadas enquanto o paciente ainda consegue falar, gerando uma voz sintética personalizada para uso posterior com comunicadores alternativos.
 
-2. **Preservação de voz para condições degenerativas (ELA, ALS):** A clonagem de voz zero-shot do XTTS é particularmente relevante para usuários diagnosticados com Esclerose Lateral Amiotrófica ou outras condições que causam perda progressiva da fala.
+2. **Audiolivros com voz autoral:** Permitir que autores preservem sua voz para narrar seus próprios livros digitalmente, criando uma experiência mais autêntica para o leitor e dispensando a contratação de locutores profissionais.
 
-3. **Audiolivros com voz autoral:** Permitir que autores preservem sua voz para narrar seus próprios livros digitalmente, criando uma experiência mais autêntica para o leitor.
+3. **Contação de histórias interativas para crianças:** A maior expressividade prosódica do XTTS, aliada à capacidade de simular diferentes vozes, é adequada para aplicações educativas infantis onde a qualidade narrativa importa mais que a velocidade.
 
-4. **Contação de histórias interativas para crianças:** A maior expressividade prosódica do XTTS, aliada à capacidade de simular diferentes vozes, é adequada para aplicações educativas infantis onde a qualidade narrativa importa mais que a velocidade.
+4. **Sistemas de comunicação alternativa e aumentativa (CAA):** Dispositivos de alta tecnologia para pessoas com paralisia cerebral ou outras condições que impedem a fala, onde a naturalidade da voz gerada é prioritária e a latência pode ser tolerada.
 
-5. **Sistemas de comunicação alternativa e aumentativa (CAA):** Dispositivos de alta tecnologia para pessoas com paralisia cerebral ou outras condições que impedem a fala, onde a naturalidade da voz gerada é prioritária e a latência pode ser tolerada.
+5. **Produção de conteúdo audiovisual acessível:** Geração de audiodescrição e legendas faladas para vídeos, documentários e produções cinematográficas, onde o tempo de processamento não é um impeditivo.
 
-6. **Produção de conteúdo audiovisual acessível:** Geração de audiodescrição e legendas faladas para vídeos, documentários e produções cinematográficas, onde o tempo de processamento não é um impeditivo.
+6. **Locução multilíngue e code-switching:** O XTTS apresentou o melhor WER na categoria nomes_internacionais (0,3190), indicando maior capacidade de lidar com termos e nomes de origem estrangeira — útil para conteúdos técnicos, científicos ou jornalísticos com alta incidência de estrangeirismos.
 
 ---
 
