@@ -111,3 +111,55 @@ Os resultados completos são exportados pelo notebook para a pasta `results/`:
 - `results/summary_by_model.csv` — resumo por modelo
 - `results/summary_by_category.csv` — resumo por categoria
 - `results/relatorio_tts.docx` — relatório formatado em Word
+
+---
+
+## 7. Análises Avançadas
+
+O notebook `notebooks/analise_avancada.ipynb` expande a análise com métricas derivadas,
+testes estatísticos e visualizações avançadas — tudo calculado a partir do CSV existente,
+**sem necessidade de reexecutar o benchmark**.
+
+### Novas Métricas Calculadas
+
+| Métrica | Descrição |
+|---|---|
+| **Throughput (char/s)** | Caracteres sintetizados por segundo (`len(texto) / latência`) |
+| **CER** | Character Error Rate via `jiwer.cer()` |
+| **WER zero (%)** | Percentual de frases com acerto perfeito (WER = 0) |
+| **Log Latência** | `log1p(latência)` para visualizações em escala logarítmica |
+
+### Testes Estatísticos Disponíveis
+
+- **Kruskal-Wallis** para WER e Latência entre os 3 modelos
+- **Teste post-hoc de Dunn** (Bonferroni) para comparação par-a-par: Piper×Kokoro, Kokoro×XTTS, Piper×XTTS
+- **Correlação de Spearman** entre NumPalavras e WER por modelo
+
+### Novos Arquivos Gerados
+
+**CSVs expandidos** (pasta `results/`):
+- `results/resultados_expandidos.csv` — DataFrame completo com as novas colunas
+- `results/estatisticas_descritivas.csv` — tabela completa de estatísticas por modelo
+- `results/testes_estatisticos.csv` — resultados de todos os testes estatísticos
+- `results/ranking_por_categoria.csv` — vencedor por categoria em WER e Latência
+- `results/analise_erros.csv` — contagem de substituições, deleções e inserções por modelo
+
+**Gráficos** (pasta `results/`):
+- `results/scatter_wer_vs_latencia.png` — dispersão WER × Latência (tamanho ∝ NumPalavras)
+- `results/violin_wer.png` — distribuição completa de WER por modelo
+- `results/violin_latencia.png` — distribuição completa de Latência por modelo
+- `results/heatmap_wer_modelo_categoria.png` — heatmap WER por modelo × categoria
+- `results/heatmap_latencia_modelo_categoria.png` — heatmap Latência por modelo × categoria
+- `results/barras_tipos_erro.png` — substituições, deleções e inserções empilhadas por modelo
+- `results/radar_comparativo.png` — radar chart com 5 eixos normalizados
+- `results/scatter_wer_vs_numpalavras.png` — WER × NumPalavras com linha de tendência
+
+### Como Executar
+
+```bash
+# Ambiente local
+jupyter notebook notebooks/analise_avancada.ipynb
+
+# Google Colab
+# Faça upload do arquivo notebooks/analise_avancada.ipynb e do CSV results/resultados_tts_tcc.csv
+```

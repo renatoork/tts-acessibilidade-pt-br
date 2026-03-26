@@ -1,0 +1,15 @@
+Categoria,Melhor WER (modelo),Melhor WER (valor),Melhor Latência (modelo),Melhor Latência (valor s)
+curtas_objetivas,Kokoro,0.1033,Piper,0.236
+datas_horarios,Kokoro,0.0688,Piper,0.552
+enderecos_urls_emails,Piper,0.3306,Piper,0.592
+ingles_e_code_switching,Kokoro,0.1701,Piper,0.43
+interrogativas_e_exclamativas,Piper,0.1355,Piper,0.408
+longas_narrativas,Kokoro,0.0467,Piper,1.427
+medias_informativas,Kokoro,0.0357,Piper,0.646
+nomes_internacionais,XTTS,0.319,Piper,0.399
+nomes_proprios_brasileiros,Kokoro,0.1369,Piper,0.408
+numeros_medidas_moedas,Piper,0.1104,Piper,0.588
+pontuacao_e_pausas,XTTS,0.1786,Piper,0.476
+regionalismos_e_girias,Piper,0.0889,Piper,0.451
+siglas_e_abreviacoes,Kokoro,0.1521,Piper,0.495
+termos_tecnicos_academicos,Kokoro,0.1451,Piper,0.651
