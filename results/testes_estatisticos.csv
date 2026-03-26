@@ -1,0 +1,12 @@
+Teste,Métrica,Estatística (H),p-value,Significativo (p<0.05)
+Kruskal-Wallis,WER,2.1391,0.343163,False
+Kruskal-Wallis,Latência,370.4574,0.0,True
+Dunn (Piper vs Kokoro),WER,,1.0,False
+Dunn (Piper vs Kokoro),Latência,,0.0,True
+Dunn (Kokoro vs XTTS),WER,,0.430855,False
+Dunn (Kokoro vs XTTS),Latência,,0.0,True
+Dunn (Piper vs XTTS),WER,,1.0,False
+Dunn (Piper vs XTTS),Latência,,0.0,True
+Spearman (Piper),NumPalavras×WER,-0.1278,0.1323,False
+Spearman (Kokoro),NumPalavras×WER,-0.2233,0.008,True
+Spearman (XTTS),NumPalavras×WER,-0.0935,0.272,False

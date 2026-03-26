@@ -1,0 +1,4 @@
+Modelo,WER médio,WER mediana,WER dp,WER mín,WER máx,WER CV (%),WER IC95 inferior,WER IC95 superior,Latência média (s),Latência mediana (s),Latência dp,Latência mín,Latência máx,Latência CV (%),Latência IC95 inferior,Latência IC95 superior,Taxa WER zero (%),Throughput médio (char/s),CER médio
+Piper,0.1848,0.125,0.201,0.0,1.0,108.8,0.1515,0.2181,0.554,0.492,0.276,0.165,1.732,49.8,0.508,0.6,25.7,123.06,0.0895
+Kokoro,0.1767,0.118,0.2233,0.0,1.8,126.4,0.1397,0.2137,4.282,3.69,2.318,1.021,12.654,54.1,3.898,4.666,31.4,16.09,0.0821
+XTTS,0.2078,0.1291,0.2379,0.0,1.8,114.5,0.1684,0.2472,25.883,22.483,14.534,7.349,77.45,56.2,23.475,28.291,21.4,2.73,0.1224

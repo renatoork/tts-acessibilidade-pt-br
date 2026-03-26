@@ -12,6 +12,14 @@ openai-whisper @ git+https://github.com/openai/whisper.git
 # Métricas
 jiwer==3.0.4
 
+# Análise de dados e visualização
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+scikit-posthocs
+
 # Relatórios
 python-docx
 
