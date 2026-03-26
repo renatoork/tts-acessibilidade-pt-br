@@ -6,7 +6,7 @@
 
 O presente capítulo analisa os resultados obtidos no benchmark comparativo entre três sistemas de *Text-to-Speech* (TTS) de código aberto com suporte ao português brasileiro: **Kokoro**, **Piper** e **XTTS v2**. O experimento totalizou **420 sínteses** (3 modelos × 140 frases × 14 categorias linguísticas), executadas em ambiente de CPU exclusiva (*CPU-only*) no Google Colab, sem aceleração por GPU, de modo a simular condições de uso acessível e de baixo custo computacional.
 
-A metodologia de avaliação adotou o paradigma de transcrição reversa: cada áudio gerado pelos modelos TTS foi transcrito automaticamente pelo *Whisper* (OpenAI), e o texto transcrito foi comparado com o texto original por meio da métrica *Word Error Rate* (WER), calculada pela biblioteca `jiwer`. Essa abordagem é amplamente adotada na literatura de avaliação objetiva de sistemas TTS quando avaliações perceptivas com ouvintes humanos (*Mean Opinion Score* — MOS) não são viáveis na escala do experimento.
+A metodologia de avaliação adotou o paradigma de transcrição reversa: cada áudio gerado pelos modelos TTS foi transcrito automaticamente pelo *Whisper* (OpenAI) (RADFORD et al., 2023), e o texto transcrito foi comparado com o texto original por meio da métrica *Word Error Rate* (WER) (MORRIS; MAIER; GREEN, 2004), calculada pela biblioteca `jiwer` (JIWER, 2024). Essa abordagem é amplamente adotada na literatura de avaliação objetiva de sistemas TTS quando avaliações perceptivas com ouvintes humanos (*Mean Opinion Score* — MOS) (ITU-T, 1996; WESTER; VALENTINI-BOTINHAO, 2016) não são viáveis na escala do experimento.
 
 ### Tabela 1 — Resumo Geral por Modelo
 
@@ -22,7 +22,7 @@ Os dados evidenciam um *trade-off* marcante: o Piper é o mais rápido (latênci
 
 ## 2. ESTATÍSTICAS DESCRITIVAS
 
-A Tabela 2 apresenta o conjunto completo de estatísticas descritivas calculadas para os três modelos, incluindo medidas de tendência central, dispersão, coeficiente de variação (CV), intervalos de confiança a 95% (IC95), taxa de sínteses com WER igual a zero, *throughput* médio em caracteres por segundo e *Character Error Rate* (CER).
+A Tabela 2 apresenta o conjunto completo de estatísticas descritivas calculadas para os três modelos, incluindo medidas de tendência central, dispersão, coeficiente de variação (CV), intervalos de confiança a 95% (IC95) (TRIOLA, 2017), taxa de sínteses com WER igual a zero, *throughput* médio em caracteres por segundo e *Character Error Rate* (CER).
 
 ### Tabela 2 — Estatísticas Descritivas Completas
 
@@ -66,11 +66,11 @@ A Tabela 2 apresenta o conjunto completo de estatísticas descritivas calculadas
 
 ## 3. ANÁLISE DE INTELIGIBILIDADE (WER)
 
-A *Word Error Rate* (WER) é a métrica primária utilizada para avaliar a inteligibilidade dos sistemas TTS neste estudo. O WER representa a proporção de palavras incorretamente transcritas em relação ao total de palavras da referência, sendo calculado como:
+A *Word Error Rate* (WER) é a métrica primária utilizada para avaliar a inteligibilidade dos sistemas TTS neste estudo (MORRIS; MAIER; GREEN, 2004). O WER representa a proporção de palavras incorretamente transcritas em relação ao total de palavras da referência, sendo calculado como:
 
 > WER = (S + D + I) / N
 
-onde S = substituições, D = deleções, I = inserções e N = número total de palavras na referência.
+onde S = substituições, D = deleções, I = inserções e N = número total de palavras na referência (MORRIS; MAIER; GREEN, 2004).
 
 ### 3.1 Comparação Global de WER
 
@@ -86,7 +86,7 @@ A diferença entre Kokoro e Piper (0,0081) é pequena em termos absolutos e, com
 
 ### 3.2 Character Error Rate (CER)
 
-O *Character Error Rate* (CER) complementa o WER ao avaliar erros no nível de caracteres, sendo mais sensível a erros em palavras curtas ou siglas:
+O *Character Error Rate* (CER) complementa o WER ao avaliar erros no nível de caracteres, sendo mais sensível a erros em palavras curtas ou siglas (MORRIS; MAIER; GREEN, 2004):
 
 | Modelo | CER médio |
 |--------|----------:|
@@ -110,7 +110,7 @@ O Kokoro alcançou transcrição perfeita em 44 de 140 frases (31,4%), demonstra
 
 ### 3.4 Implicações para Acessibilidade
 
-Para usuários com deficiência visual que dependem de leitores de tela, ou para pessoas com dificuldades de leitura que utilizam TTS como auxílio cognitivo, a inteligibilidade é o critério mais crítico. Um WER próximo a 18% pode, em cenários práticos, ser tolerável para sínteses de frases curtas e de uso cotidiano, mas se torna problemático em contextos que exigem precisão absoluta, como leitura de bulas de medicamentos, contratos ou informações médicas. Nesses casos, a taxa de WER zero ganha relevância central.
+Para usuários com deficiência visual que dependem de leitores de tela, ou para pessoas com dificuldades de leitura que utilizam TTS como auxílio cognitivo (BRASIL, 2015), a inteligibilidade é o critério mais crítico. Um WER próximo a 18% pode, em cenários práticos, ser tolerável para sínteses de frases curtas e de uso cotidiano, mas se torna problemático em contextos que exigem precisão absoluta, como leitura de bulas de medicamentos, contratos ou informações médicas. Nesses casos, a taxa de WER zero ganha relevância central.
 
 ---
 
@@ -148,15 +148,15 @@ O Piper gera texto falado a uma taxa ~7,6× superior ao Kokoro e ~45× superior 
 
 ### 4.3 Implicações para Acessibilidade em Tempo Real
 
-Para que um sistema TTS seja percebido como "tempo real" pelo usuário, a latência deve ser inferior a aproximadamente 300 ms para respostas interativas, ou inferior a 1-2 segundos para leitura de textos. Apenas o **Piper** atende consistentemente a esse limiar (latência mediana de 492 ms). O Kokoro, com latência mediana de 3,69 s, pode ser aceitável para leitura de textos longos, audiolivros ou conteúdo pré-gerado. O XTTS, com latência mediana de 22,5 s em CPU, é inadequado para qualquer aplicação interativa sem GPU.
+Para que um sistema TTS seja percebido como "tempo real" pelo usuário, a latência deve ser inferior a aproximadamente 300 ms para respostas interativas, ou inferior a 1-2 segundos para leitura de textos (W3C, 2018). Apenas o **Piper** atende consistentemente a esse limiar (latência mediana de 492 ms). O Kokoro, com latência mediana de 3,69 s, pode ser aceitável para leitura de textos longos, audiolivros ou conteúdo pré-gerado. O XTTS, com latência mediana de 22,5 s em CPU, é inadequado para qualquer aplicação interativa sem GPU.
 
-A diferença de latência entre os modelos é **estatisticamente significativa** (Kruskal-Wallis: H = 370,4574, p < 0,001), conforme detalhado na Seção 7.
+A diferença de latência entre os modelos é **estatisticamente significativa** (Kruskal-Wallis: H = 370,4574, p < 0,001), conforme detalhado na Seção 7. Para usuários de leitores de tela (BERSCH, 2017), essa diferença de latência é determinante na escolha do modelo.
 
 ---
 
 ## 5. ANÁLISE POR CATEGORIA LINGUÍSTICA
 
-O corpus de avaliação foi estruturado em **14 categorias linguísticas** com 10 frases cada, cobrindo fenômenos fonéticos, morfossintáticos e de uso que representam desafios específicos para sistemas TTS em português brasileiro.
+O corpus de avaliação foi estruturado em **14 categorias linguísticas** com 10 frases cada, cobrindo fenômenos fonéticos, morfossintáticos e de uso que representam desafios específicos para sistemas TTS em português brasileiro (GALDINO; OLIVEIRA JR., 2023).
 
 ### Tabela 3 — WER e Latência por Modelo e Categoria
 
@@ -224,7 +224,7 @@ As categorias com WER mais elevado em todos os modelos merecem atenção especia
 
 ## 6. ANÁLISE DE ERROS — TIPOS DE ERRO
 
-A análise dos tipos de erro de WER (substituições, deleções e inserções) oferece *insights* qualitativos sobre os padrões de falha de cada modelo TTS.
+A análise dos tipos de erro de WER (substituições, deleções e inserções) oferece *insights* qualitativos sobre os padrões de falha de cada modelo TTS (MORRIS; MAIER; GREEN, 2004).
 
 ### Tabela 5 — Distribuição de Tipos de Erro
 
@@ -242,7 +242,7 @@ Para acessibilidade, substituições são os erros de maior impacto semântico: 
 
 ### 6.2 Inserções — Padrão de "Alucinação" no XTTS
 
-O XTTS apresenta a maior taxa de **inserções** (17,2%, total de 77 inserções), contra 14,1% do Piper e 14,9% do Kokoro. Inserções ocorrem quando o modelo sintetiza sons adicionais não presentes no texto de referência — comportamento análogo às "alucinações" observadas em modelos de linguagem generativos. A arquitetura GPT autoregressiva do XTTS v2, que gera tokens de áudio sequencialmente baseando-se em contexto anterior, é mais propensa a esse tipo de erro do que as arquiteturas determinísticas do Piper (VITS) e Kokoro (StyleTTS2).
+O XTTS apresenta a maior taxa de **inserções** (17,2%, total de 77 inserções), contra 14,1% do Piper e 14,9% do Kokoro. Inserções ocorrem quando o modelo sintetiza sons adicionais não presentes no texto de referência — comportamento análogo às "alucinações" observadas em modelos de linguagem generativos. A arquitetura GPT autoregressiva do XTTS v2 (CASANOVA et al., 2024), que gera tokens de áudio sequencialmente baseando-se em contexto anterior, é mais propensa a esse tipo de erro do que as arquiteturas determinísticas do Piper (VITS) (KIM et al., 2021) e Kokoro (StyleTTS2) (LI et al., 2023).
 
 ### 6.3 Deleções — Impacto Reduzido
 
@@ -262,7 +262,7 @@ Esses valores indicam que, em contexto real de uso, cerca de 3 em cada 4 palavra
 
 ## 7. TESTES ESTATÍSTICOS
 
-Para verificar a significância estatística das diferenças observadas entre os modelos, foram aplicados testes não-paramétricos, adequados à natureza assimétrica e potencialmente não-normal das distribuições de WER e latência.
+Para verificar a significância estatística das diferenças observadas entre os modelos, foram aplicados testes não-paramétricos (MONTGOMERY; RUNGER, 2021), adequados à natureza assimétrica e potencialmente não-normal das distribuições de WER e latência.
 
 ### Tabela 6 — Resultados dos Testes Estatísticos
 
@@ -282,17 +282,17 @@ Para verificar a significância estatística das diferenças observadas entre os
 
 ### 7.1 Kruskal-Wallis para WER
 
-O teste de Kruskal-Wallis aplicado ao WER resultou em H = 2,1391 e p = 0,3432, **não rejeitando a hipótese nula** de que as distribuições de WER dos três modelos são equivalentes. Em termos práticos, isso significa que **os três modelos não diferem significativamente em termos de inteligibilidade** quando avaliados sobre o corpus completo de 140 frases.
+O teste de Kruskal-Wallis (KRUSKAL; WALLIS, 1952) aplicado ao WER resultou em H = 2,1391 e p = 0,3432, **não rejeitando a hipótese nula** de que as distribuições de WER dos três modelos são equivalentes. Em termos práticos, isso significa que **os três modelos não diferem significativamente em termos de inteligibilidade** quando avaliados sobre o corpus completo de 140 frases.
 
 Esse resultado é relevante: embora existam diferenças numéricas nos WER médios (0,1767 a 0,2078), essas diferenças não são estatisticamente distinguíveis da variabilidade aleatória do experimento. A heterogeneidade dentro de cada modelo (CV > 100%) supera a variabilidade entre modelos.
 
 ### 7.2 Kruskal-Wallis para Latência
 
-O teste de Kruskal-Wallis para latência produziu H = 370,4574 e p < 0,001 (arredondado para zero na precisão numérica utilizada), **rejeitando a hipótese nula** com altíssima significância. Os três modelos diferem dramaticamente em termos de velocidade de síntese — resultado esperado dadas as diferenças arquiteturais fundamentais entre VITS (Piper), StyleTTS2 (Kokoro) e GPT+HiFiGAN (XTTS).
+O teste de Kruskal-Wallis (KRUSKAL; WALLIS, 1952) para latência produziu H = 370,4574 e p < 0,001 (arredondado para zero na precisão numérica utilizada), **rejeitando a hipótese nula** com altíssima significância. Os três modelos diferem dramaticamente em termos de velocidade de síntese — resultado esperado dadas as diferenças arquiteturais fundamentais entre VITS (Piper), StyleTTS2 (Kokoro) e GPT+HiFiGAN (XTTS).
 
 ### 7.3 Testes Post-Hoc de Dunn para Latência
 
-O teste de Dunn com correção de Bonferroni confirmou que **todas as três comparações par a par de latência são estatisticamente significativas** (p < 0,001):
+O teste de Dunn (DUNN, 1961) com correção de Bonferroni confirmou que **todas as três comparações par a par de latência são estatisticamente significativas** (p < 0,001):
 
 - Piper vs. Kokoro: diferença de ~3,7 s em média, p < 0,001
 - Kokoro vs. XTTS: diferença de ~21,6 s em média, p < 0,001
@@ -304,11 +304,11 @@ Para WER, nenhuma comparação par a par foi significativa (p ≥ 0,4309), confi
 
 ## 8. CORRELAÇÃO ENTRE TAMANHO DA FRASE E ERROS
 
-O teste de correlação de Spearman foi aplicado para investigar se existe relação entre o número de palavras de uma frase (*NumPalavras*) e seu WER. A hipótese intuitiva seria que frases mais longas são mais difíceis de sintetizar e transcrever, resultando em maior WER.
+O teste de correlação de Spearman (SPEARMAN, 1904) foi aplicado para investigar se existe relação entre o número de palavras de uma frase (*NumPalavras*) e seu WER. A hipótese intuitiva seria que frases mais longas são mais difíceis de sintetizar e transcrever, resultando em maior WER.
 
 ### 8.1 Resultados
 
-Os resultados do Spearman (Tabela 6) revelam um padrão contrário à intuição inicial:
+Os resultados do Spearman (SPEARMAN, 1904) (Tabela 6) revelam um padrão contrário à intuição inicial:
 
 - **Kokoro:** ρ = −0,2233, p = 0,008 — **correlação negativa significativa**
 - **Piper:** ρ = −0,1278, p = 0,1323 — correlação negativa não significativa
@@ -363,7 +363,7 @@ Com base nos resultados quantitativos do benchmark, é possível mapear cenário
 
 O Piper é recomendado para cenários que exigem **resposta imediata** e funcionamento em hardware limitado:
 
-1. **Leitores de tela para deficientes visuais:** Com latência mediana de 492 ms, o Piper permite leitura de elementos de interface sem atraso perceptível, sendo adequado para substituir soluções comerciais em sistemas operacionais de código aberto.
+1. **Leitores de tela para deficientes visuais:** Com latência mediana de 492 ms, o Piper permite leitura de elementos de interface sem atraso perceptível, sendo adequado para substituir soluções comerciais em sistemas operacionais de código aberto. O direito de acesso a tecnologias assistivas é assegurado pela Lei Brasileira de Inclusão (BRASIL, 2015), e leitores de tela figuram entre as principais ferramentas de tecnologia assistiva (BERSCH, 2017).
 
 2. **Semáforos e sinais sonoros urbanos:** Dispositivos embarcados em infraestrutura urbana (semáforos acessíveis, totens de informação) podem executar o Piper localmente, sem necessidade de conectividade à internet.
 
@@ -371,7 +371,7 @@ O Piper é recomendado para cenários que exigem **resposta imediata** e funcion
 
 4. **Notificações em tempo real:** Sistemas de alerta (emergências, transportes públicos) que precisam sintetizar mensagens dinâmicas com latência mínima.
 
-5. **Dispositivos IoT acessíveis:** O modelo ONNX do Piper (~63 MB) pode ser executado em microcontroladores com Linux embarcado (Raspberry Pi e similares), viabilizando assistentes de voz offline para pessoas com deficiência.
+5. **Dispositivos IoT acessíveis:** O modelo ONNX do Piper (~63 MB) pode ser executado em microcontroladores com Linux embarcado (Raspberry Pi e similares), viabilizando assistentes de voz offline para pessoas com deficiência (SASSAKI, 2010; WHO, 2019).
 
 6. **Audiodescrição ao vivo:** Sistemas de audiodescrição para transmissões ao vivo ou eventos presenciais, onde o atraso deve ser minimizado para sincronização com o conteúdo visual.
 
@@ -379,7 +379,7 @@ O Piper é recomendado para cenários que exigem **resposta imediata** e funcion
 
 O Kokoro é recomendado para aplicações que valorizam **qualidade da síntese** e onde alguma latência é tolerável:
 
-1. **Plataformas de e-learning acessíveis:** Conversão de material didático escrito em áudio de alta qualidade para estudantes com dislexia ou deficiência visual, onde o conteúdo é pré-gerado antes da aula.
+1. **Plataformas de e-learning acessíveis:** Conversão de material didático escrito em áudio de alta qualidade para estudantes com dislexia ou deficiência visual (GALVÃO FILHO, 2009), onde o conteúdo é pré-gerado antes da aula.
 
 2. **Audiolivros em português brasileiro:** Narração automatizada de livros digitais, especialmente textos narrativos e informativos, onde o Kokoro demonstrou WER de apenas 0,0467 em longas_narrativas.
 
@@ -395,13 +395,13 @@ O Kokoro é recomendado para aplicações que valorizam **qualidade da síntese*
 
 O XTTS v2 é recomendado para aplicações que valorizam **expressividade** e **personalização de voz**, especialmente quando GPU está disponível:
 
-1. **Preservação de voz para condições degenerativas (ELA):** A clonagem de voz zero-shot do XTTS é particularmente relevante para usuários diagnosticados com Esclerose Lateral Amiotrófica (ELA) ou outras condições que causam perda progressiva da fala. O modelo pode ser treinado com amostras de voz gravadas enquanto o paciente ainda consegue falar, gerando uma voz sintética personalizada para uso posterior com comunicadores alternativos.
+1. **Preservação de voz para condições degenerativas (ELA):** A clonagem de voz zero-shot do XTTS (CASANOVA et al., 2022) é particularmente relevante para usuários diagnosticados com Esclerose Lateral Amiotrófica (ELA) ou outras condições que causam perda progressiva da fala (BERSCH, 2017). O modelo pode ser treinado com amostras de voz gravadas enquanto o paciente ainda consegue falar, gerando uma voz sintética personalizada para uso posterior com comunicadores alternativos.
 
 2. **Audiolivros com voz autoral:** Permitir que autores preservem sua voz para narrar seus próprios livros digitalmente, criando uma experiência mais autêntica para o leitor e dispensando a contratação de locutores profissionais.
 
 3. **Contação de histórias interativas para crianças:** A maior expressividade prosódica do XTTS, aliada à capacidade de simular diferentes vozes, é adequada para aplicações educativas infantis onde a qualidade narrativa importa mais que a velocidade.
 
-4. **Sistemas de comunicação alternativa e aumentativa (CAA):** Dispositivos de alta tecnologia para pessoas com paralisia cerebral ou outras condições que impedem a fala, onde a naturalidade da voz gerada é prioritária e a latência pode ser tolerada.
+4. **Sistemas de comunicação alternativa e aumentativa (CAA):** Dispositivos de alta tecnologia para pessoas com paralisia cerebral ou outras condições que impedem a fala (BERSCH, 2017), onde a naturalidade da voz gerada é prioritária e a latência pode ser tolerada.
 
 5. **Produção de conteúdo audiovisual acessível:** Geração de audiodescrição e legendas faladas para vídeos, documentários e produções cinematográficas, onde o tempo de processamento não é um impeditivo.
 
@@ -430,11 +430,11 @@ A Tabela 8 apresenta uma avaliação qualitativa dos três modelos em critérios
 
 **Interpretação da matriz:**
 
-- O **Piper** se destaca como a solução mais **pragmática e escalável** para acessibilidade em contextos de recursos limitados. Sua portabilidade (ONNX, ~63 MB), velocidade e adequação para tempo real tornam-no a escolha natural para a maioria dos casos de uso de acessibilidade digital no Brasil.
+- O **Piper** se destaca como a solução mais **pragmática e escalável** para acessibilidade em contextos de recursos limitados. Sua portabilidade (ONNX, ~63 MB), velocidade e adequação para tempo real tornam-no a escolha natural para a maioria dos casos de uso de acessibilidade digital no Brasil (BRASIL, 2015).
 
-- O **Kokoro** representa o **ponto ótimo** entre qualidade e velocidade para conteúdo pré-gerado. Com o melhor WER do benchmark e qualidade de voz superior ao Piper (segundo avaliação qualitativa), é ideal para plataformas educativas e de entretenimento acessível.
+- O **Kokoro** representa o **ponto ótimo** entre qualidade e velocidade para conteúdo pré-gerado. Baseado na arquitetura StyleTTS2 (LI et al., 2023), com o melhor WER do benchmark e qualidade de voz superior ao Piper (segundo avaliação qualitativa), é ideal para plataformas educativas e de entretenimento acessível.
 
-- O **XTTS v2** oferece capacidades únicas (clonagem de voz, expressividade) que nenhum outro modelo do benchmark suporta, mas sua utilidade prática em ambiente CPU é severamente limitada. Com acesso a GPU, o perfil de adequação do XTTS mudaria significativamente, tornando-o competitivo também em latência.
+- O **XTTS v2** (CASANOVA et al., 2024) oferece capacidades únicas (clonagem de voz, expressividade) que nenhum outro modelo do benchmark suporta, mas sua utilidade prática em ambiente CPU é severamente limitada. Com acesso a GPU, o perfil de adequação do XTTS mudaria significativamente, tornando-o competitivo também em latência.
 
 ---
 
@@ -448,11 +448,11 @@ Todos os experimentos foram executados exclusivamente em CPU no Google Colab, se
 
 ### 12.2 Avaliação Exclusivamente Automática
 
-O estudo não incluiu avaliação perceptiva humana (*Mean Opinion Score* — MOS), que é o padrão-ouro para qualidade subjetiva de voz. O WER mede inteligibilidade objetiva, mas não captura aspectos como naturalidade, entonação, ritmo e qualidade estética da voz, que são igualmente relevantes para a experiência do usuário em aplicações de acessibilidade.
+O estudo não incluiu avaliação perceptiva humana (*Mean Opinion Score* — MOS) (ITU-T, 1996), que é o padrão-ouro para qualidade subjetiva de voz. O WER mede inteligibilidade objetiva, mas não captura aspectos como naturalidade, entonação, ritmo e qualidade estética da voz, que são igualmente relevantes para a experiência do usuário em aplicações de acessibilidade.
 
 ### 12.3 Escopo de Modelos Avaliados
 
-Apenas três modelos TTS foram avaliados. O ecossistema de TTS de código aberto inclui outros modelos relevantes (como MMS da Meta, StyleTTS2, Bark, entre outros) que não foram incluídos por limitações de tempo e escopo. A conclusão de que "o Kokoro tem o melhor WER" é válida apenas no contexto dos três modelos avaliados.
+Apenas três modelos TTS foram avaliados. O ecossistema de TTS de código aberto inclui outros modelos relevantes (GALDINO; OLIVEIRA JR., 2023), como MMS da Meta, StyleTTS2, Bark, entre outros, que não foram incluídos por limitações de tempo e escopo. A conclusão de que "o Kokoro tem o melhor WER" é válida apenas no contexto dos três modelos avaliados.
 
 ### 12.4 Corpus de Avaliação
 
@@ -460,7 +460,53 @@ O corpus de 140 frases, organizado em 14 categorias com 10 frases cada, é repre
 
 ### 12.5 Viés do Transcritor Whisper
 
-O uso do Whisper como transcritor automático introduz um viés sistemático: o WER calculado reflete não apenas os erros do modelo TTS, mas também os erros e tendências do próprio Whisper. O Whisper foi treinado predominantemente em dados do inglês e pode ter desempenho inferior em português brasileiro para determinados fonemas ou padrões prosódicos, penalizando modelos que sintetizam esses padrões de forma não convencional mas perfeitamente inteligível para um ouvinte humano nativo.
+O uso do Whisper (RADFORD et al., 2023) como transcritor automático introduz um viés sistemático: o WER calculado reflete não apenas os erros do modelo TTS, mas também os erros e tendências do próprio Whisper. O Whisper foi treinado predominantemente em dados do inglês e pode ter desempenho inferior em português brasileiro para determinados fonemas ou padrões prosódicos, penalizando modelos que sintetizam esses padrões de forma não convencional mas perfeitamente inteligível para um ouvinte humano nativo.
+
+---
+
+## REFERÊNCIAS BIBLIOGRÁFICAS
+
+BERSCH, Rita. *Introdução à tecnologia assistiva*. Porto Alegre: CEDI, 2017.
+
+BRASIL. **Lei nº 13.146, de 6 de julho de 2015**. Institui a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência). Brasília, DF: Diário Oficial da União, 2015. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm. Acesso em: 26 mar. 2026.
+
+CASANOVA, E. et al. YourTTS: towards zero-shot multi-speaker TTS and zero-shot voice conversion for everyone. In: INTERNATIONAL CONFERENCE ON MACHINE LEARNING (ICML), 39., 2022, Baltimore. **Proceedings [...]**. [S. l.]: PMLR, 2022. v. 162, p. 2709-2720. Disponível em: https://proceedings.mlr.press/v162/casanova22a.html. Acesso em: 26 mar. 2026.
+
+CASANOVA, E. et al. XTTS: a massively multilingual zero-shot text-to-speech model. In: INTERSPEECH, 25., 2024, Kos. **Proceedings [...]**. [S. l.]: ISCA, 2024. Disponível em: https://www.isca-archive.org/interspeech_2024/casanova24_interspeech.html. Acesso em: 26 mar. 2026.
+
+DUNN, O. J. Multiple comparisons among means. **Journal of the American Statistical Association**, v. 56, n. 293, p. 52-64, 1961.
+
+GALDINO, J. C.; OLIVEIRA JR., M. Prosódia e síntese da fala: uma revisão integrativa da literatura. **Revista da ABRALIN**, v. 22, n. 1, p. 1-15, 2023. DOI: 10.25189/rabralin.v22i1.2130. Disponível em: https://revista.abralin.org/index.php/abralin/article/view/2130. Acesso em: 26 mar. 2026.
+
+GALVÃO FILHO, Teófilo. *Tecnologia assistiva para uma escola inclusiva*: apropriação, demandas e perspectivas. Salvador: EDUFBA, 2009.
+
+ITU-T. **Recommendation P.800**: methods for subjective determination of transmission quality. Geneva: International Telecommunication Union, 1996.
+
+JIWER. **jiwer**: calculate word error rate (WER) and other speech-to-text metrics. Versão 3.1.0. [S. l.], 2024. Disponível em: https://github.com/jitsi/jiwer. Acesso em: 26 mar. 2026.
+
+KIM, J. et al. Conditional variational autoencoder with adversarial learning for end-to-end text-to-speech. In: INTERNATIONAL CONFERENCE ON MACHINE LEARNING (ICML), 38., 2021, Virtual. **Proceedings [...]**. [S. l.]: PMLR, 2021. p. 5530-5540.
+
+KRUSKAL, W. H.; WALLIS, W. A. Use of ranks in one-criterion variance analysis. **Journal of the American Statistical Association**, v. 47, n. 260, p. 583-621, 1952.
+
+LI, Y. A. et al. StyleTTS 2: towards human-level text-to-speech through style diffusion and adversarial training with large speech language models. In: CONFERENCE ON NEURAL INFORMATION PROCESSING SYSTEMS (NeurIPS), 37., 2023, New Orleans. **Proceedings [...]**. [S. l.]: NeurIPS Foundation, 2023.
+
+MONTGOMERY, D. C.; RUNGER, G. C. *Estatística aplicada e probabilidade para engenheiros*. 7. ed. Rio de Janeiro: LTC, 2021.
+
+MORRIS, A.; MAIER, V.; GREEN, P. From WER and RIL to MER and WIL: improved evaluation measures for connected speech recognition. In: INTERNATIONAL CONFERENCE ON SPOKEN LANGUAGE PROCESSING (INTERSPEECH), 8., 2004, Jeju. **Proceedings [...]**. [S. l.]: ISCA, 2004. p. 2765-2768.
+
+RADFORD, A. et al. Robust speech recognition via large-scale weak supervision. In: INTERNATIONAL CONFERENCE ON MACHINE LEARNING (ICML), 40., 2023, Honolulu. **Proceedings [...]**. [S. l.]: PMLR, 2023. v. 202, p. 28492-28518.
+
+SASSAKI, Romeu Kazumi. *Inclusão*: construindo uma sociedade para todos. 8. ed. Rio de Janeiro: WVA, 2010.
+
+SPEARMAN, C. The proof and measurement of association between two things. **The American Journal of Psychology**, v. 15, n. 1, p. 72-101, 1904.
+
+TRIOLA, Mario F. *Introdução à estatística*. 12. ed. Rio de Janeiro: LTC, 2017.
+
+W3C. **Web Content Accessibility Guidelines (WCAG) 2.1**. W3C Recommendation, 5 June 2018. Disponível em: https://www.w3.org/TR/WCAG21/. Acesso em: 26 mar. 2026.
+
+WESTER, M.; VALENTINI-BOTINHAO, C. Are automatic measures of speech quality correlated with listener judgements? In: INTERSPEECH, 17., 2016, San Francisco. **Proceedings [...]**. [S. l.]: ISCA, 2016. p. 277-281. DOI: 10.21437/Interspeech.2016-1166.
+
+WHO. **World report on vision**. Geneva: World Health Organization, 2019. Disponível em: https://www.who.int/publications/i/item/9789241516570. Acesso em: 26 mar. 2026.
 
 ---
 
