@@ -8,9 +8,9 @@ O benchmark foi executado com **420 sínteses** (140 frases × 3 modelos) em amb
 
 | Modelo | Latência média (s) | WER médio | Classificação |
 |--------|:-----------------:|:---------:|:-------------:|
-| **Kokoro** | 7,357 | **0,1381** | 🥇 Melhor inteligibilidade |
-| **Piper** | **0,996** | 0,3130 | ⚡ Mais rápido |
-| **XTTS v2** | 42,034 | 0,2095 | 🎭 Mais expressivo |
+| **Kokoro** | 4,282 | **0,1767** | 🥇 Melhor inteligibilidade |
+| **Piper** | **0,554** | 0,1848 | ⚡ Mais rápido |
+| **XTTS v2** | 25,883 | 0,2078 | 🎭 Mais expressivo |
 
 ---
 
@@ -18,24 +18,24 @@ O benchmark foi executado com **420 sínteses** (140 frases × 3 modelos) em amb
 
 ### Kokoro (StyleTTS2 + ONNX)
 
-- **WER médio**: 0,1381 — o mais baixo entre os 3 modelos, indicando **maior fidelidade na síntese**.
-- **Latência média**: 7,357 segundos — razoável para CPU, considerando a qualidade entregue.
+- **WER médio**: 0,1767 — o mais baixo entre os 3 modelos, indicando **maior fidelidade na síntese**.
+- **Latência média**: 4,282 segundos — razoável para CPU, considerando a qualidade entregue.
 - **Voz**: feminina (`pf_dora`), natural e fluida.
 - **Destaque**: excelente desempenho em categorias com vocabulário técnico e nomes próprios.
 - **Tamanho**: ~326 MB (ONNX) — equilíbrio entre qualidade e tamanho.
 
 ### Piper (VITS)
 
-- **WER médio**: 0,3130 — maior taxa de erro, mas ainda funcional para muitas aplicações.
-- **Latência média**: **0,996 segundos** — o **mais rápido** por uma margem enorme (42× mais rápido que XTTS).
+- **WER médio**: 0,1848 — taxa de erro próxima ao Kokoro e funcional para diversas aplicações.
+- **Latência média**: **0,554 segundos** — o **mais rápido** por uma margem enorme (~46× mais rápido que XTTS).
 - **Voz**: masculina (`pt_BR-cadu-medium`), clara e objetiva.
 - **Destaque**: ideal para aplicações em tempo real, leitores de tela, sistemas embarcados.
 - **Tamanho**: ~63 MB — o mais leve dos 3.
 
 ### XTTS v2 (Coqui / GPT + HiFiGAN)
 
-- **WER médio**: 0,2095 — segundo melhor resultado em inteligibilidade.
-- **Latência média**: **42,034 segundos** — o mais lento, reflexo da arquitetura GPT em CPU.
+- **WER médio**: 0,2078 — o maior WER entre os três modelos no ambiente CPU-only.
+- **Latência média**: **25,883 segundos** — o mais lento, reflexo da arquitetura GPT em CPU.
 - **Voz**: multilingual com clonagem zero-shot (expressiva e variada).
 - **Destaque**: maior expressividade e capacidade de clonagem de voz.
 - **Tamanho**: ~1,8 GB — o maior dos 3 modelos.
@@ -49,22 +49,22 @@ O benchmark foi executado com **420 sínteses** (140 frases × 3 modelos) em amb
 
 | Categoria | Kokoro WER | Piper WER | XTTS WER | Média |
 |-----------|:----------:|:---------:|:--------:|:-----:|
-| `curtas_objetivas` | — | — | — | — |
-| `datas_horarios` | — | — | — | — |
-| `enderecos_urls_emails` | — | — | — | — |
-| `ingles_e_code_switching` | — | — | — | — |
-| `interrogativas_e_exclamativas` | — | — | — | — |
-| `longas_narrativas` | — | — | — | — |
-| `medias_informativas` | — | — | — | — |
-| `nomes_internacionais` | — | — | — | — |
-| `nomes_proprios_brasileiros` | — | — | — | — |
-| `numeros_medidas_moedas` | — | — | — | — |
-| `pontuacao_e_pausas` | — | — | — | — |
-| `regionalismos_e_girias` | — | — | — | — |
-| `siglas_e_abreviacoes` | — | — | — | — |
-| `termos_tecnicos_academicos` | — | — | — | — |
+| `curtas_objetivas` | 0,1033 | 0,1083 | 0,1833 | 0,1317 |
+| `datas_horarios` | 0,0688 | 0,1142 | 0,1527 | 0,1119 |
+| `enderecos_urls_emails` | 0,5079 | 0,3306 | 0,4219 | 0,4202 |
+| `ingles_e_code_switching` | 0,1701 | 0,2614 | 0,2151 | 0,2155 |
+| `interrogativas_e_exclamativas` | 0,1619 | 0,1355 | 0,1567 | 0,1514 |
+| `longas_narrativas` | 0,0467 | 0,1036 | 0,0740 | 0,0748 |
+| `medias_informativas` | 0,0357 | 0,0874 | 0,1506 | 0,0912 |
+| `nomes_internacionais` | 0,3970 | 0,5089 | 0,3190 | 0,4083 |
+| `nomes_proprios_brasileiros` | 0,1369 | 0,2236 | 0,2694 | 0,2100 |
+| `numeros_medidas_moedas` | 0,1968 | 0,1104 | 0,1879 | 0,1650 |
+| `pontuacao_e_pausas` | 0,2354 | 0,1938 | 0,1786 | 0,2026 |
+| `regionalismos_e_girias` | 0,1163 | 0,0889 | 0,1898 | 0,1317 |
+| `siglas_e_abreviacoes` | 0,1521 | 0,1699 | 0,2186 | 0,1802 |
+| `termos_tecnicos_academicos` | 0,1451 | 0,1503 | 0,1918 | 0,1624 |
 
-> Os resultados detalhados por categoria serão exportados como CSV na pasta `results/` após a execução completa do notebook.
+> Dados extraídos diretamente do arquivo `results/resumo_por_modelo_categoria.csv`.
 
 ---
 
