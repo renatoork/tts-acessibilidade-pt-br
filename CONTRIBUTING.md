@@ -78,7 +78,13 @@ Este projeto adota um ambiente respeitoso e inclusivo. Toda comunicação deve s
 
 ## Contato
 
-**Renato Arruda** — [@renatoork](https://github.com/renatoork)
+Projeto desenvolvido colaborativamente por:
+
+**Renato Arruda** 
+**Rafael Soares**  
+**Raphael Henrique**  
+ 
+ [@renatoork](https://github.com/renatoork)
 
 Para dúvidas sobre a pesquisa, abra uma [Issue](https://github.com/renatoork/tts-acessibilidade-pt-br/issues) ou entre em contato diretamente pelo GitHub.
 
